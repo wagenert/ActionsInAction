@@ -1,0 +1,14 @@
+name: MyFirstWorkflow
+on: 
+  push:
+    branches: 
+      -main
+  workflow_dispatch:
+  
+jobs:
+  MyFirstJob
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "👋 Hello, world"
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
